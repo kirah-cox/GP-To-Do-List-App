@@ -1,9 +1,14 @@
 ﻿
 
+using GP_To_Do_List_App;
+
 public class Program
 {
     static void Main()
     {
+        ToDoList toDoList = new ToDoList();
+
+
         bool runProgram = true;
         
         while (runProgram)
@@ -28,6 +33,8 @@ public class Program
 
                     Console.WriteLine("When is the task due?");
                     string dueDate = Console.ReadLine();
+
+                    toDoList.AddTask(taskName, taskDescription, dueDate);
                 }
                 else if (option == 2)
                 {
