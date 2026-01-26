@@ -20,8 +20,11 @@ public class Program
             {
                 if (option == 1)
                 {
-                    Console.WriteLine("What is the task?");
-                    string task = Console.ReadLine();
+                    Console.WriteLine("What is the task name?");
+                    string taskName = Console.ReadLine();
+
+                    Console.WriteLine("What is the task description?");
+                    string taskDescription = Console.ReadLine();
 
                     Console.WriteLine("When is the task due?");
                     string dueDate = Console.ReadLine();
