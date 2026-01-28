@@ -16,5 +16,16 @@ namespace GP_To_Do_List_App
             taskList.Add(task);
         }
 
+        public void RemoveTask(string name) 
+        {
+            foreach (Task i in taskList)
+            {
+                if (i.Name == name)
+                {
+                    taskList.Remove(i);
+                }
+            }
+        }
+
     }
 }
