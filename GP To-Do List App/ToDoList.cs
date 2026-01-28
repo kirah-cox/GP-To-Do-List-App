@@ -37,5 +37,13 @@ namespace GP_To_Do_List_App
                 }
             }
         }
+
+        public void ViewList()
+        {
+            foreach (Task task in taskList)
+            {
+                Console.WriteLine($"{task.Name} | {task.Description} | {task.DueDate} | {task.IsCompleted}");
+            }
+        }
     }
 }

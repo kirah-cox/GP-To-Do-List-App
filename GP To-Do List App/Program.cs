@@ -42,7 +42,10 @@ public class Program
                 {
                     Console.WriteLine("What task do you want to remove?");
                     string taskName = Console.ReadLine();
+
                     toDoList.RemoveTask(taskName);
+
+                    Console.WriteLine("The task has been removed from to the To-do list.");
                 }
                 else if (option == 3)
                 {
@@ -56,6 +59,8 @@ public class Program
                 else if (option == 4)
                 {
                     Console.WriteLine("Here is your complete To-Do list:");
+
+                    toDoList.ViewList();
                 }
                 else if (option == 5)
                 {
