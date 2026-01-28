@@ -35,6 +35,8 @@ public class Program
                     string dueDate = Console.ReadLine();
 
                     toDoList.AddTask(taskName, taskDescription, dueDate);
+
+                    Console.WriteLine("The task has been added to the To-do list.");
                 }
                 else if (option == 2)
                 {
@@ -45,6 +47,11 @@ public class Program
                 else if (option == 3)
                 {
                     Console.WriteLine("What task do you want to mark as complete?");
+                    string taskName = Console.ReadLine();
+
+                    toDoList.MarkAsComplete(taskName);
+
+                    Console.WriteLine("This task has been marked as complete.");
                 }
                 else if (option == 4)
                 {

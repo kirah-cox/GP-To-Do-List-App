@@ -27,5 +27,15 @@ namespace GP_To_Do_List_App
             }
         }
 
+        public void MarkAsComplete(string name)
+        {
+            foreach (Task task in taskList)
+            {
+                if (task.Name == name)
+                {
+                    task.IsCompleted = true;
+                }
+            }
+        }
     }
 }
