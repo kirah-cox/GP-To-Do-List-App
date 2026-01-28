@@ -41,6 +41,8 @@ public class Program
                 else if (option == 2)
                 {
                     Console.WriteLine("What task do you want to remove?");
+                    string taskName = Console.ReadLine();
+                    toDoList.RemoveTask(taskName);
                 }
                 else if (option == 3)
                 {
