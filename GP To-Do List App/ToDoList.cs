@@ -10,20 +10,20 @@ namespace GP_To_Do_List_App
         {
            //new Task {Name = "Make bed", Description = "do it", DueDate = "12/12/12", IsCompleted = false}
         };
+
+
         public void AddTask(string name, string description, string dueDate)
         {
             Task task = new Task(name, description, dueDate);
             taskList.Add(task);
         }
 
-        public void RemoveTask(string name) 
+        public void RemoveTask(string name)
         {
-            foreach (Task i in taskList)
+            for (int i = taskList.Count - 1; i >= 0; i--)
             {
-                if (i.Name == name)
-                {
-                    taskList.Remove(i);
-                }
+                if (taskList[i].Name == name)
+                    taskList.RemoveAt(i);
             }
         }
 
