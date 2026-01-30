@@ -36,31 +36,54 @@ public class Program
 
                     toDoList.AddTask(taskName, taskDescription, dueDate);
 
-                    Console.WriteLine("The task has been added to the To-do list.");
+                    Console.WriteLine("The task has been added to the To-do list.\n");
                 }
                 else if (option == 2)
                 {
-                    Console.WriteLine("What task do you want to remove?");
-                    string taskName = Console.ReadLine();
+                    if (toDoList.taskList.Count != 0)
+                    {
+                        Console.WriteLine("What task do you want to remove?");
+                        string taskName = Console.ReadLine();
 
-                    toDoList.RemoveTask(taskName);
+                        toDoList.RemoveTask(taskName);
 
-                    Console.WriteLine("The task has been removed from to the To-do list.");
+                        Console.WriteLine("The task has been removed from to the To-do list.\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine("You have no tasks to remove.\n");
+                    }
                 }
                 else if (option == 3)
                 {
-                    Console.WriteLine("What task do you want to mark as complete?");
-                    string taskName = Console.ReadLine();
+                    if (toDoList.taskList.Count != 0)
+                    {
+                        Console.WriteLine("What task do you want to mark as complete?");
+                        string taskName = Console.ReadLine();
 
-                    toDoList.MarkAsComplete(taskName);
+                        toDoList.MarkAsComplete(taskName);
 
-                    Console.WriteLine("This task has been marked as complete.");
+                        Console.WriteLine("This task has been marked as complete.\n");
+                    }
+                    else
+                    {
+                        Console.WriteLine("You have no tasks to mark as complete.\n");
+                    }
                 }
                 else if (option == 4)
                 {
-                    Console.WriteLine("Here is your complete To-Do list:");
+                    if (toDoList.taskList.Count != 0)
+                    {
+                        Console.WriteLine("Here is your complete To-Do list:\n");
 
-                    toDoList.ViewList();
+                        toDoList.ViewList();
+
+                        Console.WriteLine();
+                    }
+                    else
+                    {
+                        Console.WriteLine("Your To-Do list is empty.\n");
+                    }
                 }
                 else if (option == 5)
                 {
@@ -69,12 +92,12 @@ public class Program
                 }
                 else
                 {
-                    Console.WriteLine("That is not a valid option.");
+                    Console.WriteLine("That is not a valid option.\n");
                 }
             }
             else
             {
-                Console.WriteLine("That is not a valid option.");
+                Console.WriteLine("That is not a valid option.\n");
             }
         }
     }

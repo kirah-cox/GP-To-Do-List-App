@@ -6,9 +6,8 @@ namespace GP_To_Do_List_App
 {
     public class ToDoList
     {
-        List<Task> taskList = new List<Task>
+        public List<Task> taskList = new List<Task>
         {
-           //new Task {Name = "Make bed", Description = "do it", DueDate = "12/12/12", IsCompleted = false}
         };
 
 
@@ -40,6 +39,9 @@ namespace GP_To_Do_List_App
 
         public void ViewList()
         {
+                Console.WriteLine($"Name | Description | Due Date | Completed");
+                Console.WriteLine($"-----------------------------------------");
+
             foreach (Task task in taskList)
             {
                 Console.WriteLine($"{task.Name} | {task.Description} | {task.DueDate} | {task.IsCompleted}");
